@@ -172,24 +172,13 @@ class GamePlay extends Component {
             <div className="col  col-sm-auto">
               <button
                 className="button btn btn-success btn-lg"
-                onClick={() => this.NewGame()}
-              // disabled={answerClicked}
-              >
+                onClick={() => this.NewGame()}>
+
                 {"Play - " + word}
               </button>
             </div>
           </div>
-          {/* <div className="row">
-                {
-                  <QCards
-                    answerPair={answerPair}
-                    answerClicked={this.state.answerClicked}
-                    word={word}
-                    winList={this.state.winList}
-                    loseList={this.state.loseList}
-                  />
-                }
-              </div> */}
+
           <div className="row">
             {answerPair.map((a, index) => (
               <div className="col col-12 col-sm-4 col-md-3 " key={index}>

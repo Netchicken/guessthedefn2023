@@ -40,15 +40,22 @@ body {
 
 
 
+  /* fallback for old browsers */
+  /* background: #30cfd0; */
+  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: -webkit-linear-gradient(to bottom, rgba(48, 207, 208, 1), rgba(51, 8, 103, 1)); */
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: linear-gradient(to bottom, rgba(48, 207, 208, 1), rgba(51, 8, 103, 1)) */
   /* background-color: rgb(169, 185, 124); */
 
-  /* background: linear-gradient(rgb(221, 236, 225), #9ea0be); */
+  /* background: linear-gradient(rgb(61, 10, 245), #9ea0be); */
 }
 
 @-webkit-keyframes slidein {
   from {
     background-position: top;
-    background-size: 3000px;
+    background-size: 2000px;
   }
 
   to {
@@ -60,7 +67,7 @@ body {
 @keyframes slidein {
   from {
     background-position: top;
-    background-size: 3000px;
+    background-size: 2000px;
   }
 
   to {
@@ -195,47 +202,3 @@ body {
   min-height: 100px;
   /* box-shadow: 3px 3px rgb(197, 196, 146), -1em 0 0.4em rgb(136, 224, 158);*/
 }
-
-
-
-/* //====================================== */
-
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-} */
