@@ -7,6 +7,10 @@ import {
 import { Card, CardText, CardTitle, CardSubtitle } from "reactstrap";
 import WinList from "./WinList";
 import LoseList from "./LoseList";
+import AppHeader from "./AppHeader";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 //import QCards from "./QCards";
 
 //keep this for async ideas with state
@@ -162,8 +166,9 @@ class GamePlay extends Component {
       return <div>Loading ....</div>;
     } else {
       return (
-        <div className="container-fluid justify-content-md-center ">
+        <div className="container-fluid">
           <div className="row  justify-content-md-center">
+            <AppHeader />
             <div className="col  col-sm-auto">
               <button
                 className="button btn btn-success btn-lg"
@@ -172,8 +177,9 @@ class GamePlay extends Component {
               >
                 {"Play - " + word}
               </button>
-
-              {/* <div className="row">
+            </div>
+          </div>
+          {/* <div className="row">
                 {
                   <QCards
                     answerPair={answerPair}
@@ -184,51 +190,49 @@ class GamePlay extends Component {
                   />
                 }
               </div> */}
-              <div className="row">
-                {answerPair.map((a, index) => (
-                  <div className="col col-12 col-sm-4 col-md-3 " key={index}>
-                    <Card className="cardBody">
-                      <CardTitle className="conditions ">
-                        {!answerClicked ? word : a.word}
-                      </CardTitle>
-                      {answerClicked ? (
-                        <CardSubtitle className="cardSubtitle">
-                          {" "}
-                          {a.word === word ? "Correct!" : "Incorrect"}
-                        </CardSubtitle>
-                      ) : (
-                        " "
-                      )}
-                      <CardText>{a.answer}</CardText>
+          <div className="row">
+            {answerPair.map((a, index) => (
+              <div className="col col-12 col-sm-4 col-md-3 " key={index}>
+                <Card className="cardBody">
+                  <CardTitle className="conditions ">
+                    {!answerClicked ? word : a.word}
+                  </CardTitle>
+                  {answerClicked ? (
+                    <CardSubtitle className="cardSubtitle">
+                      {" "}
+                      {a.word === word ? "Correct!" : "Incorrect"}
+                    </CardSubtitle>
+                  ) : (
+                    " "
+                  )}
+                  <CardText>{a.answer}</CardText>
 
-                      <button
-                        className="buttonSubmit btn btn-primary"
-                        value={a}
-                        key={index}
-                        onClick={() => this.WinLose(a)}
-                        disabled={answerClicked}
-                      >
-                        {!answerClicked ? "Choose Definition" : a.word}
-                      </button>
-                    </Card>
-                  </div>
-                ))}
-              </div>
-              <div className="row  justify-content-md-center">
-                <div className="col-md-auto">
-                  <WinList winList={this.state.winList} />
-                </div>
-                <div className="col-md-auto">
-                  <LoseList loseList={this.state.loseList} />
                   <button
                     className="buttonSubmit btn btn-primary"
-                    onClick={() => this.RetestLoseWords()}
+                    value={a}
+                    key={index}
+                    onClick={() => this.WinLose(a)}
+                    disabled={answerClicked}
                   >
-                    Retest
+                    {!answerClicked ? "Choose Definition" : a.word}
                   </button>
-                </div>
+                </Card>
               </div>
-              <p></p>
+            ))}
+
+          </div>
+          <div className="row  justify-content-md-center">
+            <div className="col-md-auto">
+              <WinList winList={this.state.winList} />
+            </div>
+            <div className="col-md-auto">
+              <LoseList loseList={this.state.loseList} />
+              <button
+                className="buttonSubmit btn btn-primary"
+                onClick={() => this.RetestLoseWords()}
+              >
+                Retest
+              </button>
             </div>
           </div>
         </div>

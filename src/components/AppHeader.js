@@ -6,14 +6,10 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavLink
 } from "reactstrap";
-//https://reactstrap.github.io/components/navbar/
-const AppHeader = props => {
+
+const AppHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -30,11 +26,11 @@ const AppHeader = props => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            <NavItem>
+            {/* <NavItem>
               <NavLink href="https://visioncollege.ac.nz/study/information-technology/">
                 Information Technology Courses
               </NavLink>
-            </NavItem>
+            </NavItem> */}
             {
               <NavItem>
                 <NavLink href="https://visioncollege.ac.nz/">
