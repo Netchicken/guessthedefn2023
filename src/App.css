@@ -2,7 +2,6 @@
 @media only screen and (max-width: 600px) {
   .cardBody {
     width: 100%;
-
   }
 
   .container-fluid {
@@ -23,18 +22,53 @@
 }
 
 body {
+
+  background-image: url('https: //github.com/Netchicken/guessthedefn2023/blob/master/src/Assets/bg.jpg');
+  background-size: cover;
+  -webkit-animation: slidein 100s;
+  animation: slidein 100s;
+
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+
+
+
+
   /* background-color: rgb(169, 185, 124); */
 
-  background: linear-gradient(rgb(221, 236, 225), #9ea0be);
+  /* background: linear-gradient(rgb(221, 236, 225), #9ea0be); */
 }
 
-/* .App {
-   text-align: center; 
-} */
+@-webkit-keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
 
-/* .App-logo {
-  height: 40vmin;
-} */
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
+}
+
+@keyframes slidein {
+  from {
+    background-position: top;
+    background-size: 3000px;
+  }
+
+  to {
+    background-position: -100px 0px;
+    background-size: 2750px;
+  }
+
+}
 
 .App-header {
   font-weight: bold;
@@ -60,7 +94,7 @@ body {
   /* font-weight: bold; 
   font-size: medium;*/
   color: #1b1c1f;
-  /* width: 200px; */
+  width: 200px;
   padding: 5px;
   /* margin-right: 35px; */
   margin-top: 5px;
@@ -166,7 +200,7 @@ body {
 
 /* //====================================== */
 
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -204,4 +238,4 @@ body {
   to {
     transform: rotate(360deg);
   }
-}
+} */
