@@ -9,7 +9,7 @@ import WinList from "./WinList";
 import LoseList from "./LoseList";
 import AppHeader from "./AppHeader";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 //import QCards from "./QCards";
 
