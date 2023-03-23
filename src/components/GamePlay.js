@@ -9,7 +9,7 @@ import WinList from "./WinList";
 import LoseList from "./LoseList";
 import AppHeader from "./AppHeader";
 
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 //import QCards from "./QCards";
 
@@ -36,14 +36,7 @@ class GamePlay extends Component {
       rndAnswer: "",
       winList: [],
       loseList: [],
-      // loseList: [
-      //   {
-      //     word: "",
-      //     answer: ""
-      //   }
-      // ]
 
-      //  isExpanded:false
     };
     this.WinLose = this.WinLose.bind(this);
     this.RetestLoseWords = this.RetestLoseWords.bind(this);
