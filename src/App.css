@@ -23,7 +23,7 @@
 
 body {
 
-  background-image: url('https: //github.com/Netchicken/guessthedefn2023/blob/master/src/Assets/bg.jpg');
+  background-image: url('/src/Assets/bg.jpg');
   background-size: cover;
   -webkit-animation: slidein 100s;
   animation: slidein 100s;
