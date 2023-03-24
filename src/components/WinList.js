@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardText, CardTitle, CardSubtitle } from "reactstrap";
+import { Card } from "reactstrap";
 //import { ListItem } from "@material-ui/core";
 
 //https://www.robinwieruch.de/react-list-component

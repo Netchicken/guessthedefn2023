@@ -15,17 +15,10 @@ const AppHeader = () => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div className="container-fluid  justify-content-md-center App-header ">
-      <Navbar color="rgb(169, 185, 124)" light expand="sm">
-        {/* <NavbarBrand
-          // className="NavbarBrand"
-          href="https://visioncollege.ac.nz/" >
-          Guess The Definition
-        </NavbarBrand> */}
-
+    <div className="container-fluid  justify-content-md-center">
+      <h2 className="header">
         Guess The Definition
-
-      </Navbar>
+      </h2>
     </div>
   );
 };

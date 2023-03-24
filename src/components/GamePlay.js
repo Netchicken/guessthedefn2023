@@ -7,9 +7,7 @@ import {
 import { Card, CardText, CardTitle, CardSubtitle } from "reactstrap";
 import WinList from "./WinList";
 import LoseList from "./LoseList";
-import AppHeader from "./AppHeader";
-
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "../App.css";
 
 //import QCards from "./QCards";
 
@@ -161,7 +159,9 @@ class GamePlay extends Component {
       return (
         <div className="container-fluid">
           <div className="row  justify-content-md-center">
-            <AppHeader />
+            <h2 className="header">
+              Guess The Definition
+            </h2>
             <div className="col  col-sm-auto">
               <button
                 className="button btn btn-success btn-lg"

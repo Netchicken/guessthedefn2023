@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardText, CardTitle, CardSubtitle } from "reactstrap";
+import { Card } from "reactstrap";
 //import { ListItem } from "@material-ui/core";
 
 //https://www.robinwieruch.de/react-list-component
@@ -20,7 +20,7 @@ const LoseList = props => {
   return (
     <div className="list-group">
       <Card className="cardBodyWinLose">
-        <h5>You have lost ... {list.length } times</h5>
+        <h5>You have lost ... {list.length} times</h5>
         {list.map((item, index) => {
           return (
             <ul className="list-group list-group-flush">
