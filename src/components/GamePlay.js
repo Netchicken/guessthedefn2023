@@ -157,7 +157,7 @@ class GamePlay extends Component {
       return <div>Loading ....</div>;
     } else {
       return (
-        <div className="container-fluid  justify-content-md-center">
+        <div className="container-fluid  h-100 d-flex justify-content-center align-items-center">
           {/* <div className="row  justify-content-md-center"> */}
 
           <div className="row  App-header">
@@ -171,7 +171,7 @@ class GamePlay extends Component {
 
           <div className="row containerSub ">
             {answerPair.map((a, index) => (
-              <div className="col justify-content-md-center   key={index}">
+              <div className="col   key={index}">
                 <Card className="cardBody">
                   <CardTitle className="conditions ">
                     {!answerClicked ? word : a.word}
@@ -200,7 +200,7 @@ class GamePlay extends Component {
             ))}
 
           </div>
-          <div className="row  containerSub">
+          <div className="row  containerSub ">
             <div className="col-md-auto">
               <WinList winList={this.state.winList} />
             </div>
