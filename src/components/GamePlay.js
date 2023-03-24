@@ -159,19 +159,19 @@ class GamePlay extends Component {
       return (
         <div className="container-fluid  justify-content-md-center">
           {/* <div className="row  justify-content-md-center"> */}
-          <h1>Guess The Definition </h1>
-          <div className="row  justify-content-md-center">
+
+          <div className="row  App-header">
             <div className="col  col-sm-auto">
-              <button
-                className="button btn btn-success btn-lg"
-                onClick={() => this.NewGame()}> {"Play - " + word}
+              <h1>Guess The Definition </h1>
+              <button className="button  buttonPlay" onClick={() => this.NewGame()}>
+                {"Play - " + word}
               </button>
             </div>
           </div>
 
-          <div className="row ">
+          <div className="row containerSub ">
             {answerPair.map((a, index) => (
-              <div className="col col-12 col-sm-4 col-md-3 " key={index}>
+              <div className="col justify-content-md-center   key={index}">
                 <Card className="cardBody">
                   <CardTitle className="conditions ">
                     {!answerClicked ? word : a.word}
@@ -200,7 +200,7 @@ class GamePlay extends Component {
             ))}
 
           </div>
-          <div className="row  justify-content-md-center">
+          <div className="row  containerSub">
             <div className="col-md-auto">
               <WinList winList={this.state.winList} />
             </div>
