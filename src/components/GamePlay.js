@@ -157,22 +157,19 @@ class GamePlay extends Component {
       return <div>Loading ....</div>;
     } else {
       return (
-        <div className="container-fluid">
+        <div className="container-fluid  justify-content-md-center">
+          {/* <div className="row  justify-content-md-center"> */}
+          <h1>Guess The Definition </h1>
           <div className="row  justify-content-md-center">
-            <h2 className="header">
-              Guess The Definition
-            </h2>
             <div className="col  col-sm-auto">
               <button
                 className="button btn btn-success btn-lg"
-                onClick={() => this.NewGame()}>
-
-                {"Play - " + word}
+                onClick={() => this.NewGame()}> {"Play - " + word}
               </button>
             </div>
           </div>
 
-          <div className="row">
+          <div className="row ">
             {answerPair.map((a, index) => (
               <div className="col col-12 col-sm-4 col-md-3 " key={index}>
                 <Card className="cardBody">
@@ -218,6 +215,7 @@ class GamePlay extends Component {
             </div>
           </div>
         </div>
+        // </div>
       );
     }
   }
